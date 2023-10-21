@@ -10,6 +10,5 @@ def table_mult(n):
         print(x+'\n')
 
 
-
 n = int(input("Введите число n: "))
 table_mult(n)
