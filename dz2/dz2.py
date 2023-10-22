@@ -9,6 +9,5 @@ def table_mult(n):
             x = x + f"  {i}*{j}={i * j}"
         print(x+'\n')
 
-
 n = int(input("Введите число n: "))
 table_mult(n)
