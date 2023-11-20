@@ -1,16 +1,18 @@
-mass = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-chislo = 0
-i = len(mass)//2
+def search(nums, target):
+    low = 0
+    high = len(nums) - 1
 
-while True:
-    if chislo in mass:
-        if mass[i] == chislo:
-            print(i)
-            break
-        elif mass[i] > chislo:
-            i = i - i//2
-        elif mass[i] < chislo:
-            i = i + i//2
-    else:
-        print(-1)
-        break
+    while low <= high:
+        mid = (low + high) // 2
+        if nums[mid] == target:
+            return mid
+        elif nums[mid] < target:
+            low = mid + 1
+        else:
+            high = mid - 1
+    return -1
+
+nums = [-1,0,3,5,9,12]
+target = 9
+
+print(search(nums, target))
